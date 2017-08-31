@@ -1,0 +1,13 @@
+<div *ngIf="groupedPets.Male">
+  <h3>Male</h3>
+  <ul>
+    <li *ngFor="let pet of groupedPets.Male | filterOnType: 'Cat' | sortBy: 'name'">{{pet.name}}</li>
+  </ul>
+</div>
+
+<div *ngIf="groupedPets.Female">
+  <h3>Female</h3>
+  <ul>
+    <li *ngFor="let pet of groupedPets.Female | filterOnType: 'Cat' | sortBy: 'name'">{{pet.name}}</li>
+  </ul>
+</div>
